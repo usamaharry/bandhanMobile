@@ -13,16 +13,15 @@ class HomeView extends StackedView<HomeViewModel> {
     Widget? child,
   ) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
-      body: const Center(
-        child: Text('Home Screen'),
+      appBar: AppBar(
+        title: const Text(
+          'Bandhan~',
+        ),
+        centerTitle: true,
       ),
     );
   }
 
   @override
-  HomeViewModel viewModelBuilder(
-    BuildContext context,
-  ) =>
-      HomeViewModel();
+  HomeViewModel viewModelBuilder(BuildContext context) => HomeViewModel();
 }
